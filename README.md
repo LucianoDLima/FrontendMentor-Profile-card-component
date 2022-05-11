@@ -4,5 +4,5 @@
 
 ## Links
 
-- [Solution](https://www.frontendmentor.io/solutions/nft-preview-scss-and-horizontal-media-query-ryjOJM4Uc)
-- [Live Site](https://lucianodlima.github.io/FrontendMentor-3-column-preview-card/)
+- [Solution](https://www.frontendmentor.io/solutions/profile-card-component-scss-trying-calc-to-center-picture-HJyKC5dL5)
+- [Live Site](https://lucianodlima.github.io/FrontendMentor-Profile-card-component/)
