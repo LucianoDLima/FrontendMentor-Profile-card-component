@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Screen reader only, for accessibility when needed */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0, 0);
+  border: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  font-size: 18px;
+  font-family: "Kumbh Sans";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  background-color: #19a2ae;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  background-image: url(../images/bg-pattern-bottom.svg);
+  background-position: 48vw 52vh;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  background-image: url(../images/bg-pattern-top.svg);
+  background-position: right 52vw bottom 35vh;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+main .profile {
+  min-width: 32.6rem;
+  min-height: 37.4rem;
+  border-radius: 1.5rem;
+  background-color: white;
+}
+
+@media screen and (min-width: 750px) {
+  main .profile {
+    min-width: calc(32.6rem + 2.5rem);
+  }
+}
+
+main .profile .profile__background {
+  position: relative;
+  background-image: url(../images/bg-pattern-card.svg);
+  background-position: center;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  height: 14rem;
+  margin-bottom: 7.2rem;
+}
+
+main .profile .profile__background .profile__user-picture {
+  position: relative;
+  left: calc(32.6rem / 2 - 96px / 2);
+  top: calc(37.4rem / 2 - (96px - .1rem));
+}
+
+@media screen and (min-width: 750px) {
+  main .profile .profile__background .profile__user-picture {
+    left: calc((32.6rem + 2.5rem) / 2 - 96px / 2);
+  }
+}
+
+main .profile .profile__background .profile__user-picture img {
+  border-radius: 50%;
+  outline: .5rem solid white;
+  width: 96px;
+}
+
+main .profile .profile__user-personal-info {
+  margin-bottom: 2.4rem;
+}
+
+main .profile .profile__user-personal-info .profile__name-age {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: .85rem;
+}
+
+main .profile .profile__user-personal-info .profile__name-age h2 {
+  font-size: .99em;
+  font-weight: 700;
+  margin-right: .9rem;
+}
+
+main .profile .profile__user-personal-info .profile__name-age p {
+  color: #6a6f81;
+}
+
+main .profile .profile__user-personal-info .profile__region {
+  border-bottom: 0.1px solid rgba(150, 150, 150, 0.2);
+  padding-bottom: 2.4rem;
+  opacity: border-bottom 0;
+}
+
+main .profile .profile__user-personal-info .profile__region p {
+  font-size: .8em;
+  text-align: center;
+  color: #6a6f81;
+}
+
+main .profile .profile__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 97%;
+}
+
+main .profile .profile__footer li p:first-child {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: .3rem;
+}
+
+main .profile .profile__footer li p:last-child {
+  font-size: .6em;
+  letter-spacing: .1rem;
+  text-align: center;
+}
+
+footer {
+  position: absolute;
+  text-align: end;
+  bottom: 2%;
+  right: 2%;
+  font-size: 2.1vh;
+}
+
+footer p {
+  color: #2d3248;
+}
+
+footer a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import '_reset.scss';
+@import '_root.scss';
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    position: relative;
+    font-size: $fs;
+    font-family: $fm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: $dark-cyan;
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-image: url(../images/bg-pattern-bottom.svg);
+        background-position: 48vw 52vh ;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(../images/bg-pattern-top.svg);
+        background-position: right 52vw bottom 35vh;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    
+}
+
+main {
+
+    .profile {
+        min-width: $profile-min-width;
+        min-height: $profile-min-height;
+        border-radius: $radius;
+        background-color: white;
+
+        @include mq-pc {
+                min-width: calc(#{$profile-min-width} + #{$profile-min-width-pc});
+        }
+        .profile__background {
+            position: relative;
+            background-image: url(../images/bg-pattern-card.svg);
+            background-position: center;
+            border-top-left-radius: $radius;
+            border-top-right-radius: $radius;
+            height: 14rem;
+            margin-bottom: 7.2rem;
+
+            
+    
+            .profile__user-picture {
+                position: relative;
+                // This allows me to center the image in a way where I can 
+                // change the width and the height without un-centering it
+                left: calc(#{$profile-min-width} / 2 - #{$profile-picture} / 2);
+                top: calc(#{$profile-min-height} / 2 - (#{$profile-picture} - .1rem)); //Was off by 1px so had to subtract it, I don't know why tho
+
+                @include mq-pc {
+                    left: calc((#{$profile-min-width} + #{$profile-min-width-pc}) / 2 - #{$profile-picture} / 2);
+                }
+    
+                img {
+                    border-radius: 50%;
+                    outline: .5rem solid white;
+                    width: $profile-picture;
+                }
+            }
+        }
+    
+        .profile__user-personal-info {
+            margin-bottom: 2.4rem;
+    
+            .profile__name-age {
+                display: flex;
+                justify-content: center;
+                margin-bottom: .85rem;
+    
+                h2 {
+                    font-size: .99em;
+                    font-weight: 700;
+                    margin-right: .9rem;
+                }
+    
+                p {
+                    color: $dark-grayish-blue;
+                }
+            }
+    
+            .profile__region {
+                border-bottom: .1px solid $dark-gray;
+                padding-bottom: 2.4rem;
+                opacity: border-bottom 0;
+    
+                p {
+                    font-size: .8em;
+                    text-align: center;
+                    color: $dark-grayish-blue;
+                }
+    
+            }
+    
+        }
+    
+        .profile__footer {
+            display: flex;
+            justify-content: space-evenly;
+            width: 97%;
+    
+            li {
+                p:first-child {
+                    font-weight: 700;
+                    text-align: center;
+                    margin-bottom: .3rem;
+                }
+    
+                p:last-child {
+                    font-size: .6em;
+                    letter-spacing: .1rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    text-align: end;
+    bottom: 2%;
+    right: 2%;
+    font-size: 2.1vh;
+    p {
+        color: $dark-desaturated-blue;
+    }
+
+    a {
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+            color: white;
+        }
+    }
+}
